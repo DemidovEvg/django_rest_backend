@@ -1,0 +1,6 @@
+JWT_AUTHENTICATION = '/api/token/'
+USER_LIST = '/api/userapp/user/'
+USER_CREATE = USER_LIST
+USER_RETRIEVE = '/api/userapp/user/{pk}/'
+USER_UPDATE = USER_RETRIEVE
+USER_DESTROY = USER_RETRIEVE

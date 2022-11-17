@@ -1,0 +1,38 @@
+### Получить токен JWT
+POST http://127.0.0.1:8000/api/token/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "geekbrains"
+}
+
+###
+GET http://127.0.0.1:8000/api/userapp/user/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2MDk5MzQ5LCJpYXQiOjE2NjYwOTkzMzksImp0aSI6IjM3ZjcyNjVkMTk3NTQxZDg5N2ViZGRjN2Q5YTAzZmMyIiwidXNlcl9pZCI6NzUyfQ.3JUuHdGbRgVhlisb-NwrhOE6Pi6SYnuQFMLtdmGnCoc
+content-type: application/json
+
+# "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2NjEwOTk2NCwiaWF0IjoxNjY2MDIzNTY0LCJqdGkiOiI1MmQ1ZTZmYWU2NTg0Mzg4OTUxM2M3MjkxZDkzYTZlNSIsInVzZXJfaWQiOjc1Mn0.rY98fOFHartLGvrKTWNAIajPoeAk9pJf3M6jSrDbthA",
+
+###
+POST http://127.0.0.1:8000/api/token/refresh/ HTTP/1.1
+content-type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2NjE4NDIwMiwiaWF0IjoxNjY2MDk3ODAyLCJqdGkiOiI1NzMzM2Y3MGFhMTI0MGM2OTQ1YjEwMTc4MjAwNTBmNCIsInVzZXJfaWQiOjc1Mn0.7IsrFCbW8I9gLz97zs9519B7-kjqQNoWsVvAnyT6wto1"
+}
+
+###
+POST http://127.0.0.1:8000/api/projectapp/qwe
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+
+< G:/000---Python/django_rest_framework/1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
